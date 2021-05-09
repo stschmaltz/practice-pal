@@ -15,8 +15,11 @@ $ npm run start
 
 # generate static project
 $ npm run generate
-```
+
 
 ## Deploy
 
+```bash
+# Just deploy
 $ npm run deploy
+```
