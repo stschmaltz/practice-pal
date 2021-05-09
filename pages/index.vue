@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      <Auth />
       <h1 class="title text-green-800">practice-pal</h1>
     </div>
   </div>

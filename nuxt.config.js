@@ -41,7 +41,39 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/firebase',
   ],
+
+  firebase: {
+    lazy: false,
+    config: {
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.FIREBASE_MESSAGE_SENDER_ID,
+      appId: process.env.FIREBASE_APP_ID,
+      measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+    },
+    onFirebaseHosting: false,
+    terminateDatabasesAfterGenerate: true,
+    services: {
+      auth: {
+        initialize: {
+          onAuthStateChangedAction: 'onAuthStateChanged',
+        },
+        ssr: false,
+        disableEmulatorWarnings: false,
+      },
+      firestore: {
+        memoryOnly: false,
+        enablePersistence: true,
+      },
+      storage: true,
+      performance: true,
+      analytics: true,
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
