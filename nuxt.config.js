@@ -44,6 +44,8 @@ export default {
     '@nuxtjs/firebase',
   ],
 
+  middleware: ['auth'],
+
   firebase: {
     lazy: false,
     config: {

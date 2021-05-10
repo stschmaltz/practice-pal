@@ -21,6 +21,13 @@ module.exports = {
           'sans - serif',
         ],
       },
+      colors: {
+        primaryMain: '#519dd9ff',
+        secondaryMain: '#01507fff',
+        primaryAccent: '#db0038ff',
+        secondaryAccent: '#f7c200ff',
+        offWhite: '#edededff',
+      },
     },
   },
   variants: {

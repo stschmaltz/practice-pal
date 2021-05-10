@@ -1,37 +1,29 @@
 <template>
   <div>
-    <form v-if="!isLoggedIn" onsubmit="return false;">
+    <form onsubmit="return false;">
       <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-          Email
-        </label>
+        <label class="header" for="email"> Email </label>
         <input
           v-model="formData.email"
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="input"
           placeholder="Email"
           type="email"
           autocomplete="username"
         />
       </div>
       <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-          Password
-        </label>
+        <label class="header" for="email"> Password </label>
         <input
           v-model="formData.password"
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="input"
           placeholder="Password"
           type="password"
           autocomplete="current-password"
         />
       </div>
-      <Btn @click="createUser">Register</Btn>
       <Btn @click="signInUser">Sign In</Btn>
+      <Btn @click="createUser">Register</Btn>
     </form>
-    <div v-else>
-      <p>You are logged in with {{ authUser.email }}.</p>
-      <Btn color="primary" outlined @click="logout">Logout</Btn>
-    </div>
   </div>
 </template>
 
@@ -84,3 +76,13 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+.header {
+  @apply block text-secondaryMain text-base font-bold mb-2;
+}
+
+.input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-secondaryMain leading-tight focus:outline-none focus:shadow-md;
+}
+</style>

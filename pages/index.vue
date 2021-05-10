@@ -1,25 +1,39 @@
 <template>
-  <div class="container">
-    <div>
+  <div class="main">
+    <div v-if="!isLoggedIn">
       <Logo />
+      <h1 class="title">Practice Pal</h1>
       <Auth />
-      <h1 class="title text-green-800">practice-pal</h1>
+    </div>
+    <div v-else>
+      <p>You are logged in with {{ authUser.email }}.</p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
-export default Vue.extend({})
+import { mapGetters, mapState } from 'vuex'
+export default Vue.extend({
+  computed: {
+    ...mapGetters({
+      isLoggedIn: 'isLoggedIn',
+    }),
+    ...mapState({
+      authUser: (state: any) => state.authUser,
+    }),
+  },
+})
 </script>
 
 <style>
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+.containerz {
+  @apply min-h-screen mx-auto;
 }
-
+.main {
+  @apply mt-20 flex justify-center items-center text-center;
+}
 .title {
-  @apply font-title block font-light text-8xl tracking-wide;
+  @apply mb-9 font-title text-primaryMain block font-bold text-6xl tracking-wide;
 }
 </style>
