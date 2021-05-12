@@ -22,10 +22,15 @@ module.exports = {
         ],
       },
       colors: {
-        primaryMain: '#519dd9ff',
-        secondaryMain: '#01507fff',
-        primaryAccent: '#db0038ff',
-        secondaryAccent: '#f7c200ff',
+        primaryMain: '#118ab2ff',
+        secondaryMain: '#073b4cff',
+        primaryAccent: '#06d6a0ff',
+        primaryAccentLight: '#cdfef1ff',
+        primaryAccentDark: '#03634aff',
+        secondaryAccent: '#ef476fff',
+        secondaryAccentLight: '#fbd0daff',
+        tertiaryAccent: '#ffd166ff',
+        tertiaryAccentLight: '#fff0ccff',
         offWhite: '#edededff',
       },
     },
@@ -33,5 +38,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

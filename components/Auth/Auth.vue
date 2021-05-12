@@ -83,6 +83,6 @@ export default Vue.extend({
 }
 
 .input {
-  @apply shadow appearance-none border rounded w-full py-2 px-3 text-secondaryMain leading-tight focus:outline-none focus:shadow-md;
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-secondaryMain leading-tight focus:border-transparent focus:outline-none focus:shadow-md;
 }
 </style>

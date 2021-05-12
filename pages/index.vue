@@ -6,7 +6,7 @@
       <Auth />
     </div>
     <div v-else>
-      <p>You are logged in with {{ authUser.email }}.</p>
+      <HomeBase />
     </div>
   </div>
 </template>
@@ -27,9 +27,6 @@ export default Vue.extend({
 </script>
 
 <style>
-.containerz {
-  @apply min-h-screen mx-auto;
-}
 .main {
   @apply mt-20 flex justify-center items-center text-center;
 }
