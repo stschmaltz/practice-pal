@@ -42,6 +42,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
+    '@nuxtjs/toast',
   ],
 
   middleware: ['auth'],
@@ -75,6 +76,20 @@ export default {
       performance: true,
       analytics: true,
     },
+  },
+
+  toast: {
+    position: 'bottom-center',
+    register: [
+      // Register custom toasts
+      {
+        name: 'my-error',
+        message: 'Oops...Something went wrong',
+        options: {
+          type: 'error',
+        },
+      },
+    ],
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -1,5 +1,5 @@
 <template>
-  <TButton
+  <button
     class="text-white font-bold py-2 px-4 rounded"
     :class="{
       'bg-primaryMain': !disabled && !loading,
@@ -13,7 +13,7 @@
   >
     <slot v-if="!loading" />
     <div v-else>Loading...</div>
-  </TButton>
+  </button>
 </template>
 
 <script>
