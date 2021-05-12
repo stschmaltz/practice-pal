@@ -1,6 +1,6 @@
 <template>
   <div class="pt-4 box-border">
-    <h2 class="font-bold text-xl">The Practice Zone</h2>
+    <!-- <h2 class="font-bold text-xl">The Practice Zone</h2> -->
 
     <div class="mt-5">
       <Btn @click="showModal = !showModal">New Practice Log</Btn>
@@ -98,10 +98,10 @@ export default Vue.extend({
           )
         }
         try {
-          await this.$fire.firestore.collection('practiceLog').add({
+          await this.$fire.firestore.collection('practiceLogs').add({
             instrument: this.formData.instrument,
             practiceDate: new Date(this.formData.practiceDate),
-            practiceTimeInMinutes: Number(this.formData.practiceTimeMinutes),
+            practiceTimeMinutes: Number(this.formData.practiceTimeMinutes),
             notes: this.formData.notes,
             userId: this.authUser.uid,
           })
