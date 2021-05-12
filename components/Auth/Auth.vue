@@ -22,7 +22,7 @@
         />
       </div>
       <Btn @click="signInUser">Sign In</Btn>
-      <Btn @click="createUser">Register</Btn>
+      <!-- <Btn @click="createUser">Register</Btn> -->
     </form>
   </div>
 </template>
@@ -50,7 +50,7 @@ export default Vue.extend({
       try {
         await this.$fire.auth.createUserWithEmailAndPassword(
           this.formData.email,
-          this.formData.password
+          this.formData.password,
         )
       } catch (e) {
         alert(e)
@@ -60,7 +60,7 @@ export default Vue.extend({
       try {
         await this.$fire.auth.signInWithEmailAndPassword(
           this.formData.email,
-          this.formData.password
+          this.formData.password,
         )
       } catch (e) {
         alert(e)

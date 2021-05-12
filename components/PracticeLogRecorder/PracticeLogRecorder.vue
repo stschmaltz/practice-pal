@@ -94,7 +94,7 @@ export default Vue.extend({
           !this.formData.practiceTimeMinutes
         ) {
           throw new Error(
-            'Must set instrument, practice date and practice time.'
+            'Must set instrument, practice date and practice time.',
           )
         }
         try {

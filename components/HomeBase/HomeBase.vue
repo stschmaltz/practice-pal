@@ -27,7 +27,7 @@ export default Vue.extend({
         const totalPracticeTime = allPracticeLogs.docs.reduce(
           (totalTime, practiceLog) =>
             (totalTime += practiceLog.data().practiceTimeMinutes),
-          0
+          0,
         )
         this.totalPracticeTime = totalPracticeTime
       } catch (e) {

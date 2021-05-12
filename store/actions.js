@@ -10,7 +10,7 @@ export default {
         'Auth User verified on server-side. User: ',
         authUser,
         'Claims:',
-        claims
+        claims,
       )
 
       await dispatch('onAuthStateChanged', {
