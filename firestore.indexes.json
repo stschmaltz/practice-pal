@@ -1,11 +1,13 @@
 {
-  "indexes": [    {
-    "collectionGroup": "practiceLogs",
-    "queryScope": "COLLECTION",
-    "fields": [
-      { "fieldPath": "userId", "order": "DESCENDING" },
-      { "fieldPath": "practiceTimeMinutes", "order": "DESCENDING" }
-    ]
-  }],
+  "indexes": [
+    {
+      "collectionGroup": "practiceLogs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "DESCENDING" },
+        { "fieldPath": "practiceTimeMinutes", "order": "DESCENDING" }
+      ]
+    }
+  ],
   "fieldOverrides": []
 }
