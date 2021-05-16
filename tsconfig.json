@@ -20,7 +20,8 @@
       "@nuxtjs/axios",
       "@types/node",
       "@nuxtjs/firebase",
-      "@nuxtjs/toast"
+      "@nuxtjs/toast",
+      "@nuxtjs/humanize-duration"
     ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

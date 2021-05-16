@@ -1,7 +1,7 @@
 <template>
   <SimpleTimeTotal
-    title="Total Practice Time Logged"
-    :time-in-minutes="totalTimeInMinutes"
+    title="Time Practiced This Month"
+    :time-in-minutes="monthTimeInMinutes"
   />
 </template>
 
@@ -9,7 +9,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
-    totalTimeInMinutes: {
+    monthTimeInMinutes: {
       type: Number,
       required: true,
     },

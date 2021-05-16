@@ -62,7 +62,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { mapState } from 'vuex'
-
+import { CreatePracticeLog } from '../../models/PracticeLog'
 export default Vue.extend({
   data: () => ({
     showModal: false,
@@ -97,14 +97,17 @@ export default Vue.extend({
             'Must set instrument, practice date and practice time.',
           )
         }
+
+        const practiceLog: CreatePracticeLog = {
+          instrument: this.formData.instrument,
+          practiceDate: new Date(this.formData.practiceDate),
+          practiceTimeMinutes: Number(this.formData.practiceTimeMinutes),
+          notes: this.formData.notes,
+          userId: this.authUser.uid,
+        }
+
         try {
-          await this.$fire.firestore.collection('practiceLogs').add({
-            instrument: this.formData.instrument,
-            practiceDate: new Date(this.formData.practiceDate),
-            practiceTimeMinutes: Number(this.formData.practiceTimeMinutes),
-            notes: this.formData.notes,
-            userId: this.authUser.uid,
-          })
+          await this.$fire.firestore.collection('practiceLogs').add(practiceLog)
         } catch (e) {
           alert(e)
           return
