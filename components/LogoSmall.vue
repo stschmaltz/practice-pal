@@ -1,5 +1,9 @@
 <template>
-  <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <svg
+    class="logoSmall"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
     <title>Music &amp;amp; Instrument Vol.1</title>
     <g>
       <path
@@ -148,7 +152,7 @@
 </template>
 
 <style>
-.logo {
+.logoSmall {
   @apply m-auto fill-current text-white h-12 w-12;
 }
 </style>
