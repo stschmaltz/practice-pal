@@ -60,7 +60,6 @@ export default Vue.extend({
     },
     totalPracticeTimeThisMonth() {
       const startOfMonthDate = startOfMonth(this.currentDate as Date) // TODO remove cast
-      console.log(startOfMonthDate)
 
       const practiceLogsThisMonth = getPracticeLogsAfterTime(
         this.allPracticeLogs,
@@ -70,13 +69,11 @@ export default Vue.extend({
       return getTimeFromPracticeLogs(practiceLogsThisMonth)
     },
     totalPracticeTimeThisWeek() {
-      const sevenDaysAgoDate = startOfDay(subDays(this.currentDate, 7))
-      console.log(sevenDaysAgoDate)
+      const sevenDaysAgoDate = startOfDay(subDays(this.currentDate as Date, 7)) // TODO remove cast
       const practiceLogsThisWeek = getPracticeLogsAfterTime(
         this.allPracticeLogs,
         sevenDaysAgoDate,
       )
-      console.log(practiceLogsThisWeek)
 
       return getTimeFromPracticeLogs(practiceLogsThisWeek)
     },

@@ -27,6 +27,7 @@
             <option value="guitar">Guitar</option>
             <option value="bass">Bass</option>
             <option value="piano">Piano</option>
+            <option value="vocals">Vocals</option>
             <option value="other">Other</option>
           </select>
         </div>
