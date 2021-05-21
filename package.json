@@ -35,7 +35,7 @@
     "core-js": "^3.12.1",
     "date-fns": "^2.21.3",
     "date-fns-tz": "^1.1.4",
-    "firebase": "^8.6.1",
+    "firebase": "^8.6.2",
     "humanize-duration": "^3.26.0",
     "nuxt": "^2.15.6"
   },
