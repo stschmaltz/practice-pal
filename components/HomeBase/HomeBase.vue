@@ -1,15 +1,19 @@
 <template>
   <div>
-    <p>Welcome {{ authUser.email }}.</p>
+    <p class="welcomeMessage">Welcome {{ user }}.</p>
     <div>
+      <PracticeLogRecorder />
+
       <div class="timeCards">
-        <PracticeTimeTotal :total-time-in-minutes="totalPracticeTimeMinutes" />
+        <PracticeTimeWeek :week-time-in-minutes="totalPracticeTimeThisWeek" />
         <PracticeTimeMonth
           :month-time-in-minutes="totalPracticeTimeThisMonth"
         />
-        <PracticeTimeWeek :week-time-in-minutes="totalPracticeTimeThisWeek" />
+        <PracticeTimeTotal :total-time-in-minutes="totalPracticeTimeMinutes" />
       </div>
-      <PracticeLogRecorder />
+      <div class="feedContainer">
+        <Feed :practice-logs="allPracticeLogs" />
+      </div>
     </div>
   </div>
 </template>
@@ -38,10 +42,14 @@ export default Vue.extend({
           await this.$fire.firestore
             .collection('practiceLogs')
             .where('userId', '==', this.authUser.uid)
+
             .get()
         ).docs
           .map((doc) => doc.data())
           .filter(isPracticeLog)
+          .sort((a, b) => {
+            return a.practiceDate >= b.practiceDate ? -1 : 1
+          })
 
         this.allPracticeLogs = allPracticeLogs
       } catch (e) {
@@ -54,6 +62,13 @@ export default Vue.extend({
     ...mapState({
       authUser: (state: any) => state.authUser,
     }),
+    user() {
+      const authUserEmail = this.authUser.email
+
+      return authUserEmail === 'stschmaltz@gmail.com'
+        ? 'Shane'
+        : this.authUser.email.split('@')[0]
+    },
     currentDate(): Date {
       const timeZone = 'Mountain'
       return utcToZonedTime(new Date(), timeZone)
@@ -85,6 +100,12 @@ export default Vue.extend({
 </script>
 
 <style>
+.feedContainer {
+  @apply mt-8;
+}
+.welcomeMessage {
+  @apply font-semibold text-2xl;
+}
 .timeCards {
   @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5 px-4;
 }

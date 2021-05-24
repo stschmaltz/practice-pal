@@ -1,9 +1,9 @@
 <template>
-  <div class="pt-4 box-border">
+  <div class="box-border">
     <!-- <h2 class="font-bold text-xl">The Practice Zone</h2> -->
 
-    <div class="mt-5">
-      <Btn @click="showModal = !showModal">New Practice Log</Btn>
+    <div class="mt-5 w-5/6 m-auto">
+      <Btn @click="showModal = !showModal">Save New Practice Log</Btn>
     </div>
 
     <Modal

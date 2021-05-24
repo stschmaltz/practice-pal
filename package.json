@@ -37,7 +37,9 @@
     "date-fns-tz": "^1.1.4",
     "firebase": "^8.6.2",
     "humanize-duration": "^3.26.0",
-    "nuxt": "^2.15.6"
+    "nuxt": "^2.15.6",
+    "title-case": "^3.0.3",
+    "v-calendar": "^2.3.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-methods": "^7.13.0",

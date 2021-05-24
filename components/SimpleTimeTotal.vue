@@ -2,7 +2,7 @@
   <div
     v-if="timeInMinutes > 0"
     class="
-      bg-gray-100
+      bg-secondaryAccentLight
       border-primaryMain
       bg-opacity-95
       border-opacity-60

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="text-white font-bold py-2 px-4 rounded"
+    class="text-white font-bold py-2 px-4 rounded w-full"
     :class="{
       'bg-primaryMain': !disabled && !loading,
       'hover:bg-blue-500': !disabled && !loading,
