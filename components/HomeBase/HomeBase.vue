@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="md:pt-0 pt-10">
     <p class="welcomeMessage">Welcome {{ user }}.</p>
     <div>
       <PracticeLogRecorder />
@@ -107,6 +107,6 @@ export default Vue.extend({
   @apply font-semibold text-2xl;
 }
 .timeCards {
-  @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5 px-4;
+  @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5 sm:px-0 px-4 sm:w-5/6 m-auto;
 }
 </style>

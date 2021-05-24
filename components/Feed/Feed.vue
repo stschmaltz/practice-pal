@@ -1,5 +1,5 @@
 <template>
-  <div class="w-5/6 m-auto">
+  <div class="sm:w-5/6 w-full sm:px-0 px-5 m-auto">
     <h1 class="font-bold text-3xl">Practice Logs</h1>
     <ul
       id="example-1"
@@ -10,9 +10,9 @@
         :key="practiceLog.practiceDate"
         class="
           bg-tertiaryAccentLight
-          p-6
+          p-5
           rounded-3xl
-          h-52
+          h-56
           flex flex-col
           justify-start
           sm:shadow-xl
@@ -21,6 +21,7 @@
           w-full
           sm:my-4
           my-2
+          sm:mx-1
         "
       >
         <h4 class="font-bold text-xl">

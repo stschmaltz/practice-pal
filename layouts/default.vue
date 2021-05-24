@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="m-auto max-w-7xl bg-primaryMainExtraLight">
     <NavBar v-if="isLoggedIn" />
     <Nuxt />
   </div>

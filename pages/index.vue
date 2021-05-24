@@ -28,7 +28,8 @@ export default Vue.extend({
 
 <style>
 .main {
-  @apply mt-20 flex justify-center items-center text-center;
+  padding-top: 8%;
+  @apply flex justify-center text-center max-w-7xl m-auto h-screen;
 }
 .title {
   @apply mb-9 font-title text-primaryMain block font-bold text-6xl tracking-wide;
