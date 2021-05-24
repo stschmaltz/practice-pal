@@ -2,22 +2,17 @@
   <div
     v-if="timeInMinutes > 0"
     class="
-      bg-secondaryAccentLight
-      border-primaryMain
-      bg-opacity-95
+      bg-secondaryAccentLight bg-opacity-95
       border-opacity-60
       |
       p-4
       border-solid
       rounded-3xl
-      border-2
       |
       flex
       justify-around
       |
-      hover:bg-secondaryAccent
-      hover:border-transparent
-      |
+      border-2 border-secondaryAccent
       transition-colors
       duration-500
     "

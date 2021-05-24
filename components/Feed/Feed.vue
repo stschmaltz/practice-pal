@@ -1,6 +1,6 @@
 <template>
   <div class="sm:w-5/6 w-full sm:px-0 px-5 m-auto">
-    <h1 class="font-bold text-3xl">Practice Logs</h1>
+    <h1 class="font-bold text-4xl">Practice Logs</h1>
     <ul
       id="example-1"
       class="flex flex-wrap item-center sm:justify-between justify-center"
@@ -10,6 +10,7 @@
         :key="practiceLog.practiceDate"
         class="
           bg-tertiaryAccentLight
+          border-2 border-tertiaryAccent
           p-5
           rounded-3xl
           h-56
