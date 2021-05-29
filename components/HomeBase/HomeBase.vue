@@ -116,7 +116,7 @@ export default Vue.extend({
   @apply mt-0;
 }
 .welcomeMessage {
-  @apply font-semibold text-2xl;
+  @apply font-semibold text-2xl text-primaryMainDark;
 }
 .timeCards {
   @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5 sm:px-0 px-4 sm:w-5/6 m-auto;

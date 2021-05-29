@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         primaryMain: '#118ab2',
+        primaryMainDark: '#0a5770',
         primaryMainLight: '#cceffa',
         primaryMainExtraLight: '#f5fcfe',
         secondaryMain: '#073b4c',
@@ -30,6 +31,7 @@ module.exports = {
         primaryAccentLight: '#cdfef1',
         primaryAccentDark: '#03634a',
         secondaryAccent: '#ef476f',
+        secondaryAccentDark: '#830b27',
         secondaryAccentLight: '#fbd0da',
         tertiaryAccent: '#ffd166',
         tertiaryAccentDark: '#805900',

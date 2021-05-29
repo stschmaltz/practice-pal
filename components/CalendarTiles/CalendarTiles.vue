@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="font-bold text-4xl mb-4 text-secondaryMain">
+    <h1 class="font-bold text-4xl mb-4 text-secondaryAccentDark">
       Practice Log Entries
     </h1>
 

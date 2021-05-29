@@ -3,7 +3,7 @@
     class="text-white font-bold py-2 px-4 rounded w-full h-full"
     :class="{
       'bg-primaryMain': !disabled && !loading,
-      'hover:bg-blue-500': !disabled && !loading,
+      'hover:bg-primaryMainDark': !disabled && !loading,
       'bg-gray-600': disabled || loading,
       'cursor-not-allowed': disabled,
       'cursor-wait': loading,
