@@ -24,5 +24,6 @@
       "@nuxtjs/humanize-duration"
     ]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["node_modules", ".nuxt", "dist"],
+  "include": ["decs.d.ts"]
 }

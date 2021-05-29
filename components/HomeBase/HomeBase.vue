@@ -11,6 +11,9 @@
         />
         <PracticeTimeTotal :total-time-in-minutes="totalPracticeTimeMinutes" />
       </div>
+      <div class="calendarTilesContainer">
+        <CalendarTiles :dates-practiced="datesPracticed" />
+      </div>
       <div class="feedContainer">
         <Feed :practice-logs="allPracticeLogs" />
       </div>
@@ -71,7 +74,13 @@ export default Vue.extend({
     },
     currentDate(): Date {
       const timeZone = 'Mountain'
+
       return utcToZonedTime(new Date(), timeZone)
+    },
+    datesPracticed(): Date[] {
+      return this.allPracticeLogs.map((practiceLog) =>
+        practiceLog.practiceDate.toDate(),
+      )
     },
     totalPracticeTimeThisMonth() {
       const startOfMonthDate = startOfMonth(this.currentDate as Date) // TODO remove cast
@@ -100,8 +109,11 @@ export default Vue.extend({
 </script>
 
 <style>
+.calendarTilesContainer {
+  @apply mt-16 px-4;
+}
 .feedContainer {
-  @apply mt-8;
+  @apply mt-0;
 }
 .welcomeMessage {
   @apply font-semibold text-2xl;

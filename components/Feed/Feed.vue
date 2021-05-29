@@ -1,6 +1,5 @@
 <template>
   <div class="sm:w-5/6 w-full sm:px-0 px-5 m-auto">
-    <h1 class="font-bold text-4xl">Practice Logs</h1>
     <ul
       id="example-1"
       class="flex flex-wrap item-center sm:justify-between justify-center"
