@@ -2,7 +2,9 @@
   <div
     v-if="timeInMinutes > 0"
     class="
-      bg-secondaryAccentLight bg-opacity-95
+      mt-4
+      text-primaryAccentDark
+      bg-primaryAccentLight bg-opacity-95
       border-opacity-60
       |
       p-4
@@ -12,24 +14,16 @@
       flex
       justify-around
       |
-      border-2 border-secondaryAccent
+      border-2 border-primaryAccent
       transition-colors
       duration-500
     "
   >
     <div class="flex flex-col justify-center">
-      <p class="text-secondaryMain dark:text-gray-300 font-semibold">
+      <p class="dark:text-gray-300 font-semibold">
         {{ title }}
       </p>
-      <p
-        class="
-          text-secondaryMain
-          dark:text-gray-100
-          font-semibold
-          text-4xl
-          m-auto
-        "
-      >
+      <p class="dark:text-gray-100 font-semibold text-4xl m-auto">
         {{ humanizedTime }}
       </p>
     </div>

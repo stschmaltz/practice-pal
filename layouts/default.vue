@@ -1,5 +1,5 @@
 <template>
-  <div class="m-auto max-w-7xl bg-primaryMainExtraLight">
+  <div class="m-auto max-w-7xl">
     <NavBar v-if="isLoggedIn" />
     <Nuxt />
   </div>
@@ -28,6 +28,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  @apply bg-primaryMainExtraLight;
 }
 .input {
   @apply shadow appearance-none border rounded w-full py-2 px-3 text-secondaryMain leading-tight focus:border-transparent focus:outline-none focus:shadow-md;

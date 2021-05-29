@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="font-bold text-4xl mb-4">Practice Log Entries</h1>
+    <h1 class="font-bold text-4xl mb-4 text-secondaryMain">
+      Practice Log Entries
+    </h1>
 
     <CalendarHeatmap :values="calendarEntries" :end-date="currentDate" />
   </div>
