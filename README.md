@@ -19,7 +19,10 @@ $ npm run generate
 
 ## Deploy
 
-```bash
+```bash 
+# Build and Deploy 
+$ npm run ci
+
 # Just deploy
 $ npm run deploy
 ```
