@@ -13,6 +13,8 @@ import { PropType } from 'vue'
 import { utcToZonedTime } from 'date-fns-tz'
 import format from 'date-fns/format'
 
+import { defaultTimezone } from '~/helpers/time'
+
 export default {
   props: {
     datesPracticed: {
@@ -23,7 +25,7 @@ export default {
   },
   computed: {
     currentDate(): string {
-      const timeZone = 'Mountain'
+      const timeZone = defaultTimezone
       const zonedTime = utcToZonedTime(new Date(), timeZone)
 
       return format(zonedTime, 'yyyy-M-d')

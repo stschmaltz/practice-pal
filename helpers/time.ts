@@ -9,4 +9,6 @@ const minutesToHumanTime = (timeInMinutes: number): string => {
 
 const minutesToMilliSeconds = (minutes: number): number => minutes * 60 * 1000
 
-export { minutesToHumanTime, minutesToMilliSeconds }
+const defaultTimezone = 'Mountain'
+
+export { minutesToHumanTime, minutesToMilliSeconds, defaultTimezone }

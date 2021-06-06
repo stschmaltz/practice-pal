@@ -1,19 +1,25 @@
 <template>
-  <div class="lg:flex flex-grow items-center">
-    <ul class="flex flex-row lg:flex-row list-none ml-auto">
-      <!-- <li class="nav-item">
-        <NuxtLink class="navLink" to="/"> Placeholder1 </NuxtLink>
-      </li>
-      <li class="nav-item">
-        <NuxtLink to="/" class="navLink"> Placeholder2 </NuxtLink>
-      </li> -->
-      <button class="navLink" outlined @click="logout">Logout</button>
-    </ul>
-  </div>
+  <ul class="flex">
+    <li
+      v-for="route in routes"
+      :key="route.title"
+      class="nav-item sm:block hidden"
+    >
+      <NuxtLink class="navLink" :to="route.link">{{ route.title }}</NuxtLink>
+    </li>
+    <button class="navLink" outlined @click="logout">Logout</button>
+  </ul>
 </template>
+
 <script lang="ts">
 import Vue from 'vue'
+
+import { Route, routes } from './routes'
+
 export default Vue.extend({
+  data: () => ({
+    routes: routes as Route[],
+  }),
   methods: {
     async logout() {
       try {
@@ -25,6 +31,7 @@ export default Vue.extend({
   },
 })
 </script>
+
 <style>
 .navLink {
   @apply px-3 cursor-pointer py-2 flex items-center text-lg font-semibold leading-snug text-white hover:opacity-75;

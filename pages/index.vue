@@ -28,7 +28,6 @@ export default Vue.extend({
 
 <style>
 .main {
-  padding-top: 8%;
   @apply flex justify-center text-center max-w-7xl m-auto h-screen;
 }
 .title {

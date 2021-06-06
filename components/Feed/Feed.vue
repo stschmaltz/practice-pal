@@ -6,7 +6,7 @@
     >
       <li
         v-for="practiceLog in renderPracticeLogs"
-        :key="practiceLog.practiceDate"
+        :key="practiceLog.practiceDateSeconds"
         class="
           bg-tertiaryAccentLight
           border-2 border-tertiaryAccent
@@ -65,6 +65,7 @@ export default Vue.extend({
               practiceLog.practiceTimeMinutes,
             ),
             practiceDate: practiceLog.practiceDate.toDate().toDateString(),
+            practiceDateSeconds: practiceLog.practiceDate.seconds,
             instrument: titleCase(practiceLog.instrument),
           }
         },

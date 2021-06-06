@@ -1,7 +1,9 @@
 <template>
   <div class="m-auto max-w-7xl">
     <NavBar v-if="isLoggedIn" />
-    <Nuxt />
+    <div class="main">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -38,5 +40,8 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+.main {
+  @apply pt-10;
 }
 </style>

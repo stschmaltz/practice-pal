@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pt-0 pt-10">
+  <div class="pt-0">
     <p class="welcomeMessage">Welcome {{ user }}.</p>
     <div>
       <PracticeLogRecorder />
@@ -26,12 +26,14 @@ import Vue from 'vue'
 import { mapState } from 'vuex'
 import { startOfMonth, subDays, startOfDay } from 'date-fns'
 import { utcToZonedTime } from 'date-fns-tz'
+
 import {
   PracticeLog,
   isPracticeLog,
   getTimeFromPracticeLogs,
   getPracticeLogsAfterTime,
 } from '~/models/PracticeLog'
+import { defaultTimezone } from '~/helpers/time'
 
 export default Vue.extend({
   data: () => ({
@@ -73,7 +75,7 @@ export default Vue.extend({
         : this.authUser.email.split('@')[0]
     },
     currentDate(): Date {
-      const timeZone = 'Mountain'
+      const timeZone = defaultTimezone
 
       return utcToZonedTime(new Date(), timeZone)
     },

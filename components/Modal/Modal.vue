@@ -50,7 +50,7 @@
         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class="sm:flex sm:items-start">
             <ModalPrimaryIcon v-if="type === 'primary'" />
-            <ModalPrimaryIcon v-else-if="type === 'error'" />
+            <ModalErrorIcon v-else-if="type === 'error'" />
             <div
               class="
                 mt-3
