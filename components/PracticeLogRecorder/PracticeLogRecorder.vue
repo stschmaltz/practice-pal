@@ -1,7 +1,5 @@
 <template>
   <div class="box-border">
-    <!-- <h2 class="font-bold text-xl">The Practice Zone</h2> -->
-
     <div
       class="h-16 mt-5 lg:w-3/6 md:w-4/6 sm:w-5/6 w-full sm:px-0 px-4 m-auto"
     >

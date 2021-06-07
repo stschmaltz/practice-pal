@@ -1,8 +1,5 @@
 export default {
   async nuxtServerInit({ dispatch }, ctx) {
-    // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
-
-    /** Get the VERIFIED authUser on the server */
     if (ctx.res && ctx.res.locals && ctx.res.locals.user) {
       const { allClaims: claims, ...authUser } = ctx.res.locals.user
 
