@@ -112,7 +112,7 @@ export default Vue.extend({
 
 <style>
 .calendarTilesContainer {
-  @apply mt-16 px-4;
+  @apply mt-16;
 }
 .feedContainer {
   @apply mt-0;
@@ -121,6 +121,6 @@ export default Vue.extend({
   @apply font-semibold text-2xl text-primaryMainDark;
 }
 .timeCards {
-  @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5 sm:px-0 px-4 sm:w-5/6 m-auto;
+  @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5  sm:w-5/6 m-auto;
 }
 </style>

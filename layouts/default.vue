@@ -1,5 +1,5 @@
 <template>
-  <div class="m-auto max-w-7xl">
+  <div class="max-w-7xl m-auto">
     <NavBar v-if="isLoggedIn" />
     <div class="main">
       <Nuxt />
@@ -42,6 +42,6 @@ html {
   margin: 0;
 }
 .main {
-  @apply pt-10;
+  @apply pt-20 sm:px-0 px-5;
 }
 </style>

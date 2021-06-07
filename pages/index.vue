@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="homeBaseContainer">
     <div v-if="!isLoggedIn">
       <Logo />
       <h1 class="title">Practice Pal</h1>
@@ -27,8 +27,8 @@ export default Vue.extend({
 </script>
 
 <style>
-.main {
-  @apply flex justify-center text-center max-w-7xl m-auto h-screen;
+.homeBaseContainer {
+  @apply flex justify-center text-center;
 }
 .title {
   @apply mb-9 font-title text-primaryMain block font-bold text-6xl tracking-wide;
