@@ -7,8 +7,7 @@
       py-2
       px-3
       text-center
-      hover:bg-blue-200
-      hover:text-blue-800
+      hover:bg-blue-200 hover:text-blue-800
       transition
       duration-300
     "
