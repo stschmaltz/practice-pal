@@ -19,10 +19,12 @@
 </template>
 
 <script lang="ts">
-const metronomeSound = new Audio('./click1.wav')
-const metronomeUpSound = new Audio('./click2.wav')
+import Vue from 'vue'
 
-export default {
+const metronomeSound = new Audio('../soft-click.wav')
+const metronomeUpSound = new Audio('../beep-metronome.flac')
+
+export default Vue.extend({
   data() {
     return {
       bpm: 128,
@@ -34,13 +36,13 @@ export default {
     }
   },
   computed: {
-    interval() {
+    interval(): number {
       return (60 * 1000) / (this.bpm * (this.measure / 4))
     },
-    beats() {
+    beats(): number {
       return Number(this.timeSignature.split('/')[0])
     },
-    measure() {
+    measure(): number {
       return Number(this.timeSignature.split('/')[1])
     },
   },
@@ -94,5 +96,5 @@ export default {
       this.count += 1
     },
   },
-}
+})
 </script>

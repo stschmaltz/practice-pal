@@ -39,7 +39,8 @@
     "firebase": "^8.6.5",
     "humanize-duration": "^3.27.0",
     "nuxt": "^2.15.6",
-    "title-case": "^3.0.3"
+    "title-case": "^3.0.3",
+    "vue-inline-svg": "^2.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-methods": "^7.13.0",

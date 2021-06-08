@@ -4,7 +4,6 @@
       bg-primaryMainLight bg-opacity-95
       fixed
       bottom-0
-      inset-x-0
       flex
       justify-between
       text-sm text-primaryMainDark
@@ -13,12 +12,13 @@
       w-full
     "
   >
-    <BottomNavElement title="home" link="/" />
+    <BottomNavElement title="home" link="/" icon="../house-icon.svg" />
     <BottomNavElement
       v-for="route in routes"
       :key="route.title"
       :title="route.title"
       :link="route.link"
+      :icon="route.icon"
     />
   </nav>
 </template>

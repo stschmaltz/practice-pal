@@ -7,7 +7,9 @@
     >
       <NuxtLink class="navLink" :to="route.link">{{ route.title }}</NuxtLink>
     </li>
-    <button class="navLink" outlined @click="logout">Logout</button>
+    <button class="navLink" outlined @click="logout">
+      <NuxtLink to="/">Logout</NuxtLink>
+    </button>
   </ul>
 </template>
 

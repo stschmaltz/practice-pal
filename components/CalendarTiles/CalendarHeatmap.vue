@@ -92,6 +92,7 @@ export default {
     values: {
       required: true,
       type: Array,
+      default: () => [] as { count: number; date: string }[],
     },
     locale: {
       type: Object,
@@ -117,7 +118,12 @@ export default {
       return this.vertical ? 'vertical' : 'horizontal'
     },
     heatmap(): Heatmap {
-      return new Heatmap(this.endDate, this.values, this.max)
+      return new Heatmap(
+        new Date(this.endDate),
+        this.values as { count: number; date: string }[],
+        this.max,
+        60,
+      )
     },
     width(): Vector {
       const sqareSize: number = this.SQUARE_SIZE as number

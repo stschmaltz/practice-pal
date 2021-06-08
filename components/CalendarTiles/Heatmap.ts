@@ -1,16 +1,17 @@
-import { DAYS_IN_ONE_YEAR, DAYS_IN_WEEK } from './constants'
+import { DAYS_IN_WEEK } from './constants'
 
 export default class Heatmap {
   constructor(
     private endDate: Date,
     private values: { count: number; date: string }[],
     private max: number,
-    private startDate: Date,
+    private daysToStartDate: number,
+    private startDate?: Date,
   ) {
     this.endDate = this._parseDate(endDate)
     this.max =
       max || Math.ceil((Math.max(...values.map((day) => day.count)) / 5) * 4)
-    this.startDate = this._shiftDate(endDate, -DAYS_IN_ONE_YEAR)
+    this.startDate = this._shiftDate(endDate, -this.daysToStartDate)
     this.values = values
   }
 
@@ -93,7 +94,7 @@ export default class Heatmap {
 
   getDaysCount() {
     return (
-      DAYS_IN_ONE_YEAR +
+      this.daysToStartDate +
       1 +
       this.getCountEmptyDaysAtStart() +
       this.getCountEmptyDaysAtEnd()
