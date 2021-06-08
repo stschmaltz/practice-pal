@@ -13,7 +13,7 @@
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:fix": "npm run lint:js --fix && npm run lint:style --fix",
-    "prettier": "prettier --single-quote --trailing-comma all --write docs package.json .",
+    "prettier": "prettier --single-quote --trailing-comma all --write package.json .",
     "test": "jest"
   },
   "lint-staged": {

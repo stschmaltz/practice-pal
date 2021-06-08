@@ -15,7 +15,8 @@
         px-4
         pb-20
         text-center
-        sm:block sm:p-0
+        sm:block
+        sm:p-0
       "
     >
       <div
@@ -40,7 +41,10 @@
           shadow-xl
           transform
           transition-all
-          sm:my-8 sm:align-middle sm:max-w-lg sm:w-full
+          sm:my-8
+          sm:align-middle
+          sm:max-w-lg
+          sm:w-full
         "
       >
         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -53,7 +57,10 @@
                 text-center
                 w-full
                 pr-0
-                sm:mt-0 sm:ml-4 sm:pr-14 sm:text-left
+                sm:mt-0
+                sm:ml-4
+                sm:pr-14
+                sm:text-left
               "
             >
               <h3
@@ -86,10 +93,10 @@
               text-white
               hover:bg-primaryAccentDark
               focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-primaryAccent
-              sm:ml-3 sm:w-auto sm:text-sm
+              focus:ring-2 focus:ring-offset-2 focus:ring-primaryAccent
+              sm:ml-3
+              sm:w-auto
+              sm:text-sm
             "
             @click="$emit('primaryAction')"
           >
@@ -113,10 +120,11 @@
               text-gray-700
               hover:bg-gray-50
               focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-gray-300
-              sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm
+              focus:ring-2 focus:ring-offset-2 focus:ring-gray-300
+              sm:mt-0
+              sm:ml-3
+              sm:w-auto
+              sm:text-sm
             "
             @click="$emit('onClose')"
           >
