@@ -40,7 +40,7 @@
     "humanize-duration": "^3.27.0",
     "nuxt": "^2.15.8",
     "title-case": "^3.0.3",
-    "vue-inline-svg": "^2.0.0"
+    "vue-inline-svg": "^2.1.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-methods": "^7.14.5",
